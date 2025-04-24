@@ -1,0 +1,22 @@
+version: '3.8' 
+services: 
+  user-service: 
+    build: ./user-service 
+    ports: 
+      - "5001:5001" 
+    environment: 
+      - JWT_SECRET_KEY=your-secret-key 
+    depends_on: 
+      - db 
+  db: 
+    image: postgres:13 
+    environment: 
+      POSTGRES_USER: user 
+      POSTGRES_PASSWORD: password 
+      POSTGRES_DB: reservations 
+    ports: 
+      - "5432:5432" 
+    volumes: 
+      - postgres_data:/var/lib/postgresql/data 
+volumes: 
+  postgres_data: 

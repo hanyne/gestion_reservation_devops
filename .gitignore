@@ -1,0 +1,18 @@
+# Python 
+__pycache__/ 
+*.pyc 
+*.pyo 
+*.pyd 
+.Python 
+env/ 
+venv/ 
+*.egg-info/ 
+.pytest_cache/ 
+# Docker 
+*.log 
+*.pid 
+# IDE 
+.idea/ 
+*.code-workspace 
+# Misc 
+*.DS_Store 
